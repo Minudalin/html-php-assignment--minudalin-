@@ -23,3 +23,14 @@ for ($row = 1; $row <= 3; $row++) {
 echo "</table>";
 ?>
 
+Q6. <?php
+$_GET['name'] = "John";
+$_GET['age'] = 20;
+
+$name = $_GET['name'];
+$age = $_GET['age'];
+
+echo "Name: $name<br>";
+echo "Age: $age";
+?>
+
