@@ -23,6 +23,27 @@ for ($row = 1; $row <= 3; $row++) {
 echo "</table>";
 ?>
 
+Q4. <?php
+$animal = "antelope";
+$animal_heads = 1;
+$animal_legs = 4;
+
+echo "The $animal has $animal_heads head(s).";
+echo "The $animal has $animal_legs leg(s).";
+?>
+
+Q5. <?php
+$price1 = 10; $qty1 = 2;
+$price2 = 20; $qty2 = 1;
+$price3 = 5;  $qty3 = 4;
+$subtotal = ($price1 * $qty1) + ($price2 * $qty2) + ($price3 * $qty3);
+$tax = $subtotal * 0.10;
+$total = $subtotal + $tax;
+echo "Subtotal: $" . $subtotal . "<br>";
+echo "Tax (10%): $" . $tax . "<br>";
+echo "Total Cost: $" . $total;
+?>
+
 Q6. <?php
 $_GET['name'] = "John";
 $_GET['age'] = 20;
@@ -33,4 +54,106 @@ $age = $_GET['age'];
 echo "Name: $name<br>";
 echo "Age: $age";
 ?>
+Q7. <?php
+// Simulated user input
+$name = "John"; // Change this to "" (empty) to test the error
+
+if (empty(trim($name))) {
+    echo "Error: Please enter your name!";
+} else {
+    echo "Hello $name, Welcome to Everyone!<br>";
+    echo "Have a nice day!!";
+}
+?>
+Q8. <?php
+function deal($costA, $sizeA, $costB, $sizeB) {
+    // Calculate cost per litre for each drink
+    $valueA = $costA / $sizeA;
+    $valueB = $costB / $sizeB;
+
+    // Compare and decide
+    if ($valueA < $valueB) {
+        echo "Choose Drink A to save money.";
+    } elseif ($valueB < $valueA) {
+        echo "Choose Drink B to save money.";
+    } else {
+        echo "Both drinks offer the same value.";
+    }
+}
+
+// Prices and sizes
+$costA = 25; $sizeA = 11;
+$costB = 23; $sizeB = 9;
+
+// Call the function
+deal($costA, $sizeA, $costB, $sizeB);
+?>
+Q10. <?php
+$marks = [95, 82, 74, 60, 45]; // Sample marks for 5 students
+
+foreach ($marks as $mark) {
+    if ($mark >= 90) {
+        $grade = "A";
+    } elseif ($mark >= 80) {
+        $grade = "B";
+    } elseif ($mark >= 70) {
+        $grade = "C";
+    } elseif ($mark >= 60) {
+        $grade = "D";
+    } else {
+        $grade = "F";
+    }
+    echo "Marks: $mark - Grade: $grade<br>";
+}
+?>
+Q11. <?php
+$day_number = 3; // Change 1-7 to test different days
+
+switch ($day_number) {
+    case 1:
+        echo "Monday";
+        break;
+    case 2:
+        echo "Tuesday";
+        break;
+    case 3:
+        echo "Wednesday";
+        break;
+    case 4:
+        echo "Thursday";
+        break;
+    case 5:
+        echo "Friday";
+        break;
+    case 6:
+        echo "Saturday";
+        break;
+    case 7:
+        echo "Sunday";
+        break;
+    default:
+        echo "Invalid day number!";
+}
+?>
+Q12. <?php
+$marks = 68; // Change this value to test different cases
+
+if ($marks >= 75) {
+    echo "First Class";
+} elseif ($marks >= 60 && $marks <= 74) {
+    echo "Second Class";
+} elseif ($marks >= 40 && $marks <= 59) {
+    echo "Third Class";
+} else {
+    echo "Fail";
+}
+?>
+Q13. <?php
+$sub = substr(12345, 2, 2);
+echo "sub is $sub";
+?>
+
+
+
+
 
