@@ -235,4 +235,77 @@ function calculateSum() {
 </body>
 </html>
 
+Q19. <!DOCTYPE html>
+<html>
+<head>
+    <title>Highest and Lowest Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 320px;
+        }
+        input, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            background: #e6ffe6;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Find Highest & Lowest Number</h2>
+    <input type="text" id="numbers" placeholder="Enter numbers separated by commas">
+    <button onclick="findHighLow()">Find</button>
+    <div id="output" class="result"></div>
+</div>
+
+<script>
+function findHighLow() {
+    let input = document.getElementById("numbers").value;
+    let numArray = input.split(",").map(num => parseFloat(num.trim())).filter(n => !isNaN(n));
+
+    if (numArray.length > 0) {
+        let highest = Math.max(...numArray);
+        let lowest = Math.min(...numArray);
+        document.getElementById("output").innerHTML =
+            "Highest value: " + highest + "<br>Lowest value: " + lowest;
+    } else {
+        document.getElementById("output").innerHTML = "Please enter valid numbers.";
+    }
+}
+</script>
+
+</body>
+</html>
+
+
 
