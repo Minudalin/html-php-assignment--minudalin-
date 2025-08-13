@@ -153,6 +153,82 @@ $sub = substr(12345, 2, 2);
 echo "sub is $sub";
 ?>
 
+Q17. <?php
+// Initial balance
+$balance = 1000;
+
+// Function to deposit money
+function deposit($balance, $amount) {
+    if ($amount > 0) {
+        $balance += $amount;
+        echo "Deposited: $amount\n";
+    } else {
+        echo "Deposit amount must be greater than 0\n";
+    }
+    return $balance;
+}
+
+// Function to withdraw money
+function withdraw($balance, $amount) {
+    if ($amount > 0) {
+        if ($amount <= $balance) {
+            $balance -= $amount;
+            echo "Withdrawn: $amount\n";
+        } else {
+            echo "Insufficient balance for withdrawal\n";
+        }
+    } else {
+        echo "Withdrawal amount must be greater than 0\n";
+    }
+    return $balance;
+}
+
+// Example transaction
+$transactionType = "withdraw"; // change to "deposit" to test
+$amount = 300;
+
+// Using switch-case to decide
+switch ($transactionType) {
+    case "deposit":
+        $balance = deposit($balance, $amount);
+        break;
+    case "withdraw":
+        $balance = withdraw($balance, $amount);
+        break;
+    default:
+        echo "Invalid transaction type\n";
+}
+
+echo "Current Balance: $balance";
+?>
+
+Q18. <?php
+$name = "John";
+$age = null;
+
+// Check if $name is set
+if (isset($name)) {
+    echo "The variable 'name' is set.\n";
+} else {
+    echo "The variable 'name' is NOT set.\n";
+}
+
+// Check if $age is set
+if (isset($age)) {
+    echo "The variable 'age' is set.\n";
+} else {
+    echo "The variable 'age' is NOT set.\n";
+}
+
+// Check multiple variables at once
+if (isset($name, $age)) {
+    echo "Both variables are set.\n";
+} else {
+    echo "Either 'name' or 'age' is NOT set.\n";
+}
+?>
+
+
 
 
 
