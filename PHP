@@ -88,6 +88,16 @@ $costB = 23; $sizeB = 9;
 // Call the function
 deal($costA, $sizeA, $costB, $sizeB);
 ?>
+
+Q9. <?php
+$var_this = "this";
+$that = "that";
+$the_other = 2.2;
+$not_set = ""; 
+
+print("$var_this,$not_set,$that+$the_other");
+
+
 Q10. <?php
 $marks = [95, 82, 74, 60, 45]; // Sample marks for 5 students
 
